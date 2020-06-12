@@ -1,7 +1,7 @@
 `timescale 1ns / 1ps
 //////////////////////////////////////////////////////////////////////////////////
-// Company: 
-// Engineer: 
+// Company: ITU
+// Engineer: Ebrar Omer
 // 
 // Create Date: 19.05.2020 17:23:48
 // Design Name: 
