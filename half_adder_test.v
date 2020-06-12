@@ -3,9 +3,9 @@
 // Company: 
 // Engineer: 
 // 
-// Create Date: 19.05.2020 18:26:10
+// Create Date: 20.05.2020 18:16:40
 // Design Name: 
-// Module Name: and_gate_test
+// Module Name: half_adder_test
 // Project Name: 
 // Target Devices: 
 // Tool Versions: 
@@ -20,17 +20,17 @@
 //////////////////////////////////////////////////////////////////////////////////
 
 
-module and_gate_test();
-    reg [31:0] A;
-    reg [31:0] B;
+module half_adder_test();
+    reg  Input1;
+    reg  Input2; 
+    wire  Output;
+    wire  Carry;
     
-    wire [31:0] C;
-    
-    and_gate uut(A,B,C);
+    half_adder uut(.A(Input1),.B(Input2), .C(Carry),.S(Output));
     initial begin
-        A =32'd1234;    B=32'd0;    #250;
-        A =32'd1234;    B=32'd1234; #250;
-        A =32'd0;       B=32'd9999; #250;
-        A =32'd99999;   B=32'd9999; #250;
+        Input1=0;    Input2=0; #250;
+        Input1=0;    Input2=1; #250;
+        Input1 =1;   Input2=0; #250;
+        Input1 =1;   Input2=1; #250;
      end
 endmodule
